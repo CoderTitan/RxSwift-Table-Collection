@@ -14,10 +14,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
+    @IBAction func loginAction(_ sender: Any) {
+        navigationController?.pushViewController(LoginViewController(), animated: true)
+    }
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func tableViewAction(_ sender: Any) {
+        navigationController?.pushViewController(RxTableViewController(), animated: true)
+    }
+    
+    @IBAction func collectionViewAction(_ sender: Any) {
+        navigationController?.pushViewController(RxCollectionViewController(), animated: true)
     }
 
 

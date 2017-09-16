@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="101" id="KGk-i7-Jjw" customClass="RxTableViewCell" customModule="RxSwift_Table_Collection" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="382" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="382" height="101"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fde-2h-uMK">
+                        <rect key="frame" x="10" y="10" width="80.5" height="80.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="fde-2h-uMK" secondAttribute="height" id="Qy2-d0-Peb"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收到回复您稍等缴费年" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaX-q9-8iR">
+                        <rect key="frame" x="100.5" y="10" width="271.5" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="mck-4S-rSO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收到回复您稍等缴费年度数据海南房价都会说你复合大师" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsB-HZ-Q8w">
+                        <rect key="frame" x="100" y="35" width="272" height="55.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.47901149611398963" green="0.47901149611398963" blue="0.47901149611398963" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DsB-HZ-Q8w" firstAttribute="top" secondItem="kaX-q9-8iR" secondAttribute="bottom" constant="5" id="4dK-qr-xYQ"/>
+                    <constraint firstAttribute="bottom" secondItem="fde-2h-uMK" secondAttribute="bottom" constant="10" id="EbB-ns-Rqe"/>
+                    <constraint firstAttribute="trailing" secondItem="kaX-q9-8iR" secondAttribute="trailing" constant="10" id="OXl-6J-EhI"/>
+                    <constraint firstItem="DsB-HZ-Q8w" firstAttribute="leading" secondItem="fde-2h-uMK" secondAttribute="trailing" constant="10" id="Oma-bC-e48"/>
+                    <constraint firstItem="kaX-q9-8iR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="RFf-xG-07l"/>
+                    <constraint firstItem="kaX-q9-8iR" firstAttribute="leading" secondItem="fde-2h-uMK" secondAttribute="trailing" constant="10" id="hb0-wL-ryT"/>
+                    <constraint firstItem="fde-2h-uMK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="n36-EZ-shk"/>
+                    <constraint firstAttribute="trailing" secondItem="DsB-HZ-Q8w" secondAttribute="trailing" constant="10" id="vmr-TC-Npz"/>
+                    <constraint firstAttribute="bottom" secondItem="DsB-HZ-Q8w" secondAttribute="bottom" constant="10" id="wFo-7I-xK6"/>
+                    <constraint firstItem="fde-2h-uMK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ynr-vq-fJK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="detailLabel" destination="DsB-HZ-Q8w" id="Idz-IK-gMi"/>
+                <outlet property="headerImage" destination="fde-2h-uMK" id="T6c-5J-oH4"/>
+                <outlet property="titleLabel" destination="kaX-q9-8iR" id="85l-Dy-g5i"/>
+            </connections>
+            <point key="canvasLocation" x="3" y="-1.5"/>
+        </tableViewCell>
+    </objects>
+</document>

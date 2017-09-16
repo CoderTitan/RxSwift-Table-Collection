@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4705E0A41F6CB8A10063F566 /* RxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0A31F6CB8A10063F566 /* RxTableViewController.swift */; };
+		4705E0A71F6CB8AA0063F566 /* RxCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0A51F6CB8AA0063F566 /* RxCollectionViewController.swift */; };
+		4705E0A81F6CB8AA0063F566 /* RxCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4705E0A61F6CB8AA0063F566 /* RxCollectionViewController.xib */; };
+		4705E0AB1F6CB8C00063F566 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0A91F6CB8C00063F566 /* HeroModel.swift */; };
+		4705E0AC1F6CB8C00063F566 /* heros.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4705E0AA1F6CB8C00063F566 /* heros.plist */; };
+		4705E0AE1F6CB8C90063F566 /* HeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0AD1F6CB8C90063F566 /* HeroViewModel.swift */; };
+		4705E0B11F6CB8D60063F566 /* RxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0AF1F6CB8D60063F566 /* RxTableViewCell.swift */; };
+		4705E0B21F6CB8D60063F566 /* RxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4705E0B01F6CB8D60063F566 /* RxTableViewCell.xib */; };
+		4705E0B51F6CB9530063F566 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0B31F6CB9530063F566 /* LoginViewController.swift */; };
+		4705E0B61F6CB9530063F566 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4705E0B41F6CB9530063F566 /* LoginViewController.xib */; };
+		4705E0B91F6CB9820063F566 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0B71F6CB9820063F566 /* RegisterViewController.swift */; };
+		4705E0BA1F6CB9820063F566 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4705E0B81F6CB9820063F566 /* RegisterViewController.xib */; };
+		4705E0BC1F6CBF970063F566 /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0BB1F6CBF970063F566 /* InputValidator.swift */; };
+		4705E0BE1F6CC1430063F566 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0BD1F6CC1430063F566 /* ResultProtocol.swift */; };
+		4705E0C21F6CD6EB0063F566 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0C11F6CD6EB0063F566 /* RegisterViewModel.swift */; };
 		5B4D609BBA846FC82B946B6A /* Pods_RxSwift_Table_Collection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E512BC2C8344DC831ED448 /* Pods_RxSwift_Table_Collection.framework */; };
 		6A0DF5B31F6C0CFC002827B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0DF5B21F6C0CFC002827B3 /* AppDelegate.swift */; };
 		6A0DF5B51F6C0CFC002827B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0DF5B41F6C0CFC002827B3 /* ViewController.swift */; };
@@ -17,6 +32,21 @@
 
 /* Begin PBXFileReference section */
 		37E512BC2C8344DC831ED448 /* Pods_RxSwift_Table_Collection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_Table_Collection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4705E0A31F6CB8A10063F566 /* RxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewController.swift; sourceTree = "<group>"; };
+		4705E0A51F6CB8AA0063F566 /* RxCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewController.swift; sourceTree = "<group>"; };
+		4705E0A61F6CB8AA0063F566 /* RxCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RxCollectionViewController.xib; sourceTree = "<group>"; };
+		4705E0A91F6CB8C00063F566 /* HeroModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		4705E0AA1F6CB8C00063F566 /* heros.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = heros.plist; sourceTree = "<group>"; };
+		4705E0AD1F6CB8C90063F566 /* HeroViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroViewModel.swift; sourceTree = "<group>"; };
+		4705E0AF1F6CB8D60063F566 /* RxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewCell.swift; sourceTree = "<group>"; };
+		4705E0B01F6CB8D60063F566 /* RxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RxTableViewCell.xib; sourceTree = "<group>"; };
+		4705E0B31F6CB9530063F566 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4705E0B41F6CB9530063F566 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		4705E0B71F6CB9820063F566 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4705E0B81F6CB9820063F566 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		4705E0BB1F6CBF970063F566 /* InputValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
+		4705E0BD1F6CC1430063F566 /* ResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
+		4705E0C11F6CD6EB0063F566 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		6A0DF5AF1F6C0CFC002827B3 /* RxSwift-Table-Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-Table-Collection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0DF5B21F6C0CFC002827B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A0DF5B41F6C0CFC002827B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +78,138 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4705E0941F6CB8660063F566 /* 登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				4705E0951F6CB8660063F566 /* Controllers */,
+				4705E0961F6CB8660063F566 /* Models */,
+				4705E0971F6CB8660063F566 /* ViewModels */,
+				4705E0981F6CB8660063F566 /* Views */,
+			);
+			path = "登录注册";
+			sourceTree = "<group>";
+		};
+		4705E0951F6CB8660063F566 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4705E0B31F6CB9530063F566 /* LoginViewController.swift */,
+				4705E0B41F6CB9530063F566 /* LoginViewController.xib */,
+				4705E0B71F6CB9820063F566 /* RegisterViewController.swift */,
+				4705E0B81F6CB9820063F566 /* RegisterViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4705E0961F6CB8660063F566 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4705E0BB1F6CBF970063F566 /* InputValidator.swift */,
+				4705E0BD1F6CC1430063F566 /* ResultProtocol.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4705E0971F6CB8660063F566 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4705E0C11F6CD6EB0063F566 /* RegisterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4705E0981F6CB8660063F566 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4705E0991F6CB8660063F566 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				4705E09A1F6CB8660063F566 /* Controllers */,
+				4705E09B1F6CB8660063F566 /* Models */,
+				4705E09C1F6CB8660063F566 /* ViewModels */,
+				4705E09D1F6CB8660063F566 /* Views */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		4705E09A1F6CB8660063F566 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4705E0A51F6CB8AA0063F566 /* RxCollectionViewController.swift */,
+				4705E0A61F6CB8AA0063F566 /* RxCollectionViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4705E09B1F6CB8660063F566 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4705E09C1F6CB8660063F566 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4705E09D1F6CB8660063F566 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4705E09E1F6CB8660063F566 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				4705E09F1F6CB8660063F566 /* Controllers */,
+				4705E0A01F6CB8660063F566 /* Models */,
+				4705E0A11F6CB8660063F566 /* ViewModels */,
+				4705E0A21F6CB8660063F566 /* Views */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		4705E09F1F6CB8660063F566 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4705E0A31F6CB8A10063F566 /* RxTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4705E0A01F6CB8660063F566 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4705E0A91F6CB8C00063F566 /* HeroModel.swift */,
+				4705E0AA1F6CB8C00063F566 /* heros.plist */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4705E0A11F6CB8660063F566 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4705E0AD1F6CB8C90063F566 /* HeroViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4705E0A21F6CB8660063F566 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4705E0AF1F6CB8D60063F566 /* RxTableViewCell.swift */,
+				4705E0B01F6CB8D60063F566 /* RxTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6A0DF5A61F6C0CFC002827B3 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +231,9 @@
 		6A0DF5B11F6C0CFC002827B3 /* RxSwift-Table-Collection */ = {
 			isa = PBXGroup;
 			children = (
+				4705E0941F6CB8660063F566 /* 登录注册 */,
+				4705E0991F6CB8660063F566 /* UICollectionView */,
+				4705E09E1F6CB8660063F566 /* UITableView */,
 				6A0DF5B21F6C0CFC002827B3 /* AppDelegate.swift */,
 				6A0DF5B41F6C0CFC002827B3 /* ViewController.swift */,
 				6A0DF5B61F6C0CFC002827B3 /* Main.storyboard */,
@@ -151,9 +316,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4705E0A81F6CB8AA0063F566 /* RxCollectionViewController.xib in Resources */,
 				6A0DF5BD1F6C0CFC002827B3 /* LaunchScreen.storyboard in Resources */,
 				6A0DF5BA1F6C0CFC002827B3 /* Assets.xcassets in Resources */,
 				6A0DF5B81F6C0CFC002827B3 /* Main.storyboard in Resources */,
+				4705E0AC1F6CB8C00063F566 /* heros.plist in Resources */,
+				4705E0B61F6CB9530063F566 /* LoginViewController.xib in Resources */,
+				4705E0B21F6CB8D60063F566 /* RxTableViewCell.xib in Resources */,
+				4705E0BA1F6CB9820063F566 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +382,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4705E0B91F6CB9820063F566 /* RegisterViewController.swift in Sources */,
+				4705E0A71F6CB8AA0063F566 /* RxCollectionViewController.swift in Sources */,
+				4705E0A41F6CB8A10063F566 /* RxTableViewController.swift in Sources */,
+				4705E0B11F6CB8D60063F566 /* RxTableViewCell.swift in Sources */,
 				6A0DF5B51F6C0CFC002827B3 /* ViewController.swift in Sources */,
+				4705E0BC1F6CBF970063F566 /* InputValidator.swift in Sources */,
+				4705E0B51F6CB9530063F566 /* LoginViewController.swift in Sources */,
 				6A0DF5B31F6C0CFC002827B3 /* AppDelegate.swift in Sources */,
+				4705E0C21F6CD6EB0063F566 /* RegisterViewModel.swift in Sources */,
+				4705E0BE1F6CC1430063F566 /* ResultProtocol.swift in Sources */,
+				4705E0AE1F6CB8C90063F566 /* HeroViewModel.swift in Sources */,
+				4705E0AB1F6CB8C00063F566 /* HeroModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +561,7 @@
 				6A0DF5C31F6C0CFD002827B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
