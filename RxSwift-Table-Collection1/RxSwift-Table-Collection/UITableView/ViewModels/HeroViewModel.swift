@@ -48,6 +48,6 @@ extension HeroViewModel {
         
         // 3.遍历所有的字典并且转成模型对象
         
-        return dictArray.map({ HeroModel(dict: $0) })
+        return dictArray.map({ HeroModel(dict: $0) }).reversed()
     }
 }
