@@ -7,6 +7,7 @@ target 'RxSwift-Table-Collection' do
 
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'RxDataSources'
 pod 'Alamofire'
 pod 'Kingfisher'
 

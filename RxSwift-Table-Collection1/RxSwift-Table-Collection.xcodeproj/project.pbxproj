@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4705E0A41F6CB8A10063F566 /* RxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0A31F6CB8A10063F566 /* RxTableViewController.swift */; };
 		4705E0A71F6CB8AA0063F566 /* RxCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0A51F6CB8AA0063F566 /* RxCollectionViewController.swift */; };
 		4705E0A81F6CB8AA0063F566 /* RxCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4705E0A61F6CB8AA0063F566 /* RxCollectionViewController.xib */; };
 		4705E0AB1F6CB8C00063F566 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0A91F6CB8C00063F566 /* HeroModel.swift */; };
@@ -22,6 +21,9 @@
 		4705E0BC1F6CBF970063F566 /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0BB1F6CBF970063F566 /* InputValidator.swift */; };
 		4705E0BE1F6CC1430063F566 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0BD1F6CC1430063F566 /* ResultProtocol.swift */; };
 		4705E0C21F6CD6EB0063F566 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705E0C11F6CD6EB0063F566 /* RegisterViewModel.swift */; };
+		474136161F6FE0240069902B /* RxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474136141F6FE0240069902B /* RxTableViewController.swift */; };
+		474136171F6FE0240069902B /* RxTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 474136151F6FE0240069902B /* RxTableViewController.xib */; };
+		4741361B1F6FFA120069902B /* AnchorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4741361A1F6FFA120069902B /* AnchorViewModel.swift */; };
 		5B4D609BBA846FC82B946B6A /* Pods_RxSwift_Table_Collection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E512BC2C8344DC831ED448 /* Pods_RxSwift_Table_Collection.framework */; };
 		6A0DF5B31F6C0CFC002827B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0DF5B21F6C0CFC002827B3 /* AppDelegate.swift */; };
 		6A0DF5B51F6C0CFC002827B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0DF5B41F6C0CFC002827B3 /* ViewController.swift */; };
@@ -32,7 +34,6 @@
 
 /* Begin PBXFileReference section */
 		37E512BC2C8344DC831ED448 /* Pods_RxSwift_Table_Collection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_Table_Collection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4705E0A31F6CB8A10063F566 /* RxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewController.swift; sourceTree = "<group>"; };
 		4705E0A51F6CB8AA0063F566 /* RxCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewController.swift; sourceTree = "<group>"; };
 		4705E0A61F6CB8AA0063F566 /* RxCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RxCollectionViewController.xib; sourceTree = "<group>"; };
 		4705E0A91F6CB8C00063F566 /* HeroModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		4705E0BB1F6CBF970063F566 /* InputValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
 		4705E0BD1F6CC1430063F566 /* ResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
 		4705E0C11F6CD6EB0063F566 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		474136141F6FE0240069902B /* RxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewController.swift; sourceTree = "<group>"; };
+		474136151F6FE0240069902B /* RxTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RxTableViewController.xib; sourceTree = "<group>"; };
+		4741361A1F6FFA120069902B /* AnchorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorViewModel.swift; sourceTree = "<group>"; };
 		6A0DF5AF1F6C0CFC002827B3 /* RxSwift-Table-Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-Table-Collection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0DF5B21F6C0CFC002827B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A0DF5B41F6C0CFC002827B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 		4705E09C1F6CB8660063F566 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4741361A1F6FFA120069902B /* AnchorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -179,7 +184,8 @@
 		4705E09F1F6CB8660063F566 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4705E0A31F6CB8A10063F566 /* RxTableViewController.swift */,
+				474136141F6FE0240069902B /* RxTableViewController.swift */,
+				474136151F6FE0240069902B /* RxTableViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				474136171F6FE0240069902B /* RxTableViewController.xib in Resources */,
 				4705E0A81F6CB8AA0063F566 /* RxCollectionViewController.xib in Resources */,
 				6A0DF5BD1F6C0CFC002827B3 /* LaunchScreen.storyboard in Resources */,
 				6A0DF5BA1F6C0CFC002827B3 /* Assets.xcassets in Resources */,
@@ -336,9 +343,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RxSwift-Table-Collection/Pods-RxSwift-Table-Collection-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -351,13 +371,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxSwift-Table-Collection-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B8D9D15DA790931D35576291 /* [CP] Copy Pods Resources */ = {
@@ -384,10 +407,11 @@
 			files = (
 				4705E0B91F6CB9820063F566 /* RegisterViewController.swift in Sources */,
 				4705E0A71F6CB8AA0063F566 /* RxCollectionViewController.swift in Sources */,
-				4705E0A41F6CB8A10063F566 /* RxTableViewController.swift in Sources */,
 				4705E0B11F6CB8D60063F566 /* RxTableViewCell.swift in Sources */,
+				474136161F6FE0240069902B /* RxTableViewController.swift in Sources */,
 				6A0DF5B51F6C0CFC002827B3 /* ViewController.swift in Sources */,
 				4705E0BC1F6CBF970063F566 /* InputValidator.swift in Sources */,
+				4741361B1F6FFA120069902B /* AnchorViewModel.swift in Sources */,
 				4705E0B51F6CB9530063F566 /* LoginViewController.swift in Sources */,
 				6A0DF5B31F6C0CFC002827B3 /* AppDelegate.swift in Sources */,
 				4705E0C21F6CD6EB0063F566 /* RegisterViewModel.swift in Sources */,

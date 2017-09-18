@@ -18,7 +18,10 @@ class HeroModel: NSObject {
     init(dict : [String : Any]) {
         super.init()
         
-        setValuesForKeys(dict)
+        name = dict["name"] as? String ?? ""
+        icon = dict["icon"] as? String ?? ""
+        intro = dict["intro"] as? String ?? ""
+
     }
 
 }

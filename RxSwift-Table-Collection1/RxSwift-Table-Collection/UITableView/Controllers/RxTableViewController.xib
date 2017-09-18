@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RxTableViewController" customModule="RxSwift_Table_Collection" customModuleProvider="target">
+            <connections>
+                <outlet property="rxTableView" destination="FUk-vp-KGH" id="cbH-VO-bQw"/>
+                <outlet property="searchBar" destination="5qt-oL-Y5h" id="iyi-ZU-KdI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5qt-oL-Y5h">
+                    <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FUk-vp-KGH">
+                    <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5qt-oL-Y5h" secondAttribute="trailing" id="0aq-1P-rdp"/>
+                <constraint firstItem="FUk-vp-KGH" firstAttribute="top" secondItem="5qt-oL-Y5h" secondAttribute="bottom" id="9cb-Ge-yTk"/>
+                <constraint firstAttribute="trailing" secondItem="FUk-vp-KGH" secondAttribute="trailing" id="RlA-QC-S0A"/>
+                <constraint firstItem="5qt-oL-Y5h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="UyL-19-hRU"/>
+                <constraint firstAttribute="bottom" secondItem="FUk-vp-KGH" secondAttribute="bottom" id="aif-3l-eOs"/>
+                <constraint firstItem="5qt-oL-Y5h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dH9-oX-ToB"/>
+                <constraint firstItem="FUk-vp-KGH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mqs-T7-5c3"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
