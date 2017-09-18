@@ -13,6 +13,7 @@ class InputValidator {
 }
 
 extension InputValidator {
+    //判断字符串是否符合语法法则
     class func isValidEmail(_ email: String) -> Bool {
         let regular = try? NSRegularExpression(pattern: "^\\S+@\\S+\\.\\S+$", options: [])
         if let re = regular {
@@ -41,18 +42,28 @@ extension InputValidator {
     
     //检测密码
     class func validatePassword(_ password : String) -> Result {
-        if password.characters.count < 8 {
+        if password.characters.count < 6 {
             return Result.failure(message: "输入密码不能少于6个字符")
         }
         
         return Result.success(message: "密码可用")
     }
     
+    //判断登陆陆时的账号和密码是否一致
     class func validateRepeatPassword(_ password : String, _ repeatPassword : String) -> Result {
-        if password == repeatPassword {
-            return Result.success(message: "账号&密码一致")
+        if password == repeatPassword && !password.isEmpty && !repeatPassword.isEmpty{
+            return Result.success(message: "两次输入的密码一致")
         }
         
-        return Result.failure(message: "账号&密码不一致")
+        return Result.failure(message: "两次输入的密码不一致")
+    }
+    
+    //判断是否可以注册成功
+    class func validateRegisterSUccess(_ username: Result, _ password : Result, _ repeatPassword : Result) -> Result {
+        if username.isValid && password.isValid && repeatPassword.isValid {
+            return Result.success(message: "注册成功")
+        }
+        
+        return Result.failure(message: "注册失败")
     }
 }

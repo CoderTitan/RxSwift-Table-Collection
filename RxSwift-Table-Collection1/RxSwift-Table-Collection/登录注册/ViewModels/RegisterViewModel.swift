@@ -22,21 +22,24 @@ class RegisterViewModel {
     
     
     init(){
-        usernameObserable = username.asObservable().map({ (password) -> Result in
-            return InputValidator.validateUserName(password)
+        //检测账号
+        usernameObserable = username.asObservable().map({ (username) -> Result in
+            return InputValidator.validateUserName(username)
         })
         
-        passwordObserable = password.asObservable().map({ (inputStr) -> Result in
-            return InputValidator.validatePassword(inputStr)
+        //检测密码
+        passwordObserable = password.asObservable().map({ (password) -> Result in
+            return InputValidator.validatePassword(password)
         })
         
+        //检测密码和重置密码
         repeatPassObserable = Observable.combineLatest(password.asObservable(), repeatPassword.asObservable(), resultSelector: { (password, repeatPassword) -> Result in
             return InputValidator.validateRepeatPassword(password, repeatPassword)
         })
         
-        
+        //检测注册是否成功
         registerBtnObserable = Observable.combineLatest(usernameObserable, passwordObserable, repeatPassObserable, resultSelector: { (username, password, repeatPassword) -> Bool in
-            return username.isValid && password.isValid && repeatPassword.isValid
+            return InputValidator.validateRegisterSUccess(username, password, repeatPassword).isValid
         })
     }
 }

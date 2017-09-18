@@ -67,5 +67,15 @@ extension Reactive where Base: UITextField {
             textField.isEnabled = result.isValid
         })
     }
-    
+}
+
+
+//MARK: 创建UIButton的监听者,是否可编辑下的背景颜色
+extension Reactive where Base: UIButton {
+    var backColorResult: UIBindingObserver<Base, Bool> {
+        return UIBindingObserver(UIElement: base, binding: { (button, result) in
+            button.setTitleColor(UIColor.white, for: .normal)
+            button.backgroundColor = result ? UIColor.red : UIColor.lightGray
+        })
+    }
 }

@@ -51,10 +51,26 @@ extension LoginViewController {
     }
     
     fileprivate func setupInputView() {
+        usernameTextField.layer.borderWidth = 1
+        usernameTextField.layer.cornerRadius = 5
+        usernameTextField.layer.masksToBounds = true
+        passwordTextField.layer.borderWidth = 1
         
+        let userObservable = usernameTextField.rx.text.map({ InputValidator.isValidEmail($0!) })
+        userObservable.map({ $0 ? UIColor.green : UIColor.clear })
+            .subscribe(onNext: { self.usernameTextField.layer.borderColor = $0.cgColor })
+            .addDisposableTo(bag)
 
+        let passObservable = passwordTextField.rx.text.map({ InputValidator.isValidEmail($0!) })
+        passObservable.map({ $0 ? UIColor.green : UIColor.clear })
+            .subscribe(onNext: { self.passwordTextField.layer.borderColor = $0.cgColor })
+            .addDisposableTo(bag)
         
-        
+        Observable.combineLatest(userObservable, passObservable) { (varildUser, varildPass) -> Bool in
+            return varildPass && varildUser
+        }.subscribe(onNext: { (isEnable) in
+            self.loginBtn.isEnabled = isEnable
+        }).addDisposableTo(bag)
         
     }
     
