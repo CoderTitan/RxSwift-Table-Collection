@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import RxSwift
 import Alamofire
 
-class AnchorViewModel: NSObject {
+class AnchorViewModel {
+    
+    fileprivate lazy var anchorArr = [AnchorModel]()
+    
+    lazy var heroVariable: Variable<[AnchorModel]> = {
+        var variable: Variable<[AnchorModel]> = Variable(self.anchorArr)
+        self.getAnchorData {
+            variable.value = self.anchorArr
+        }
+        return variable
+    }()
 
-    fileprivate func getHeroData(_ finished: @escaping() -> ()) -> [HeroModel]{
-        
-        var heros = [HeroModel]()
-        
+
+}
+
+
+extension AnchorViewModel {
+    fileprivate func getAnchorData(_ finished: @escaping() -> ()){
         // 1.发送网络请求
         Alamofire.request("http://qf.56.com/home/v4/moreAnchor.ios", method: .get, parameters: ["index": 0]).responseJSON { (response) in
             // 2.获取结果
@@ -30,9 +43,8 @@ class AnchorViewModel: NSObject {
             
             
             // 4.遍历所有的字典并且转成模型对象
-            heros += anchors.map({ HeroModel(dict: $0) })
+            self.anchorArr += anchors.map({ AnchorModel(dic: $0) })
+            finished()
         }
-        
-        return heros
     }
 }
