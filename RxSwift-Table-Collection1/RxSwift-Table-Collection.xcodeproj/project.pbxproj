@@ -59,6 +59,7 @@
 		474136231F70A8FF0069902B /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		474136251F70A9B70069902B /* RxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollectionViewCell.swift; sourceTree = "<group>"; };
 		474136261F70A9B70069902B /* RxCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RxCollectionViewCell.xib; sourceTree = "<group>"; };
+		47A44BB81F7646F10052750D /* RxSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RxSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		6A0DF5AF1F6C0CFC002827B3 /* RxSwift-Table-Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-Table-Collection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0DF5B21F6C0CFC002827B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A0DF5B41F6C0CFC002827B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +254,7 @@
 				4705E0991F6CB8660063F566 /* UICollectionView */,
 				4705E09E1F6CB8660063F566 /* UITableView */,
 				6A0DF5B21F6C0CFC002827B3 /* AppDelegate.swift */,
+				47A44BB81F7646F10052750D /* RxSwift-Bridging-Header.h */,
 				6A0DF5B41F6C0CFC002827B3 /* ViewController.swift */,
 				6A0DF5B61F6C0CFC002827B3 /* Main.storyboard */,
 				6A0DF5B91F6C0CFC002827B3 /* Assets.xcassets */,
@@ -306,7 +308,7 @@
 				TargetAttributes = {
 					6A0DF5AE1F6C0CFC002827B3 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3HG8J7L5X5;
+						DevelopmentTeam = 39D8T9VWXG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -360,6 +362,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -369,6 +372,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -393,7 +397,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B8D9D15DA790931D35576291 /* [CP] Copy Pods Resources */ = {
@@ -559,13 +563,15 @@
 			baseConfigurationReference = E0DFDF221D14C98B6FB6C3FD /* Pods-RxSwift-Table-Collection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3HG8J7L5X5;
+				DEVELOPMENT_TEAM = 39D8T9VWXG;
 				INFOPLIST_FILE = "RxSwift-Table-Collection/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.quanjun.www.RxSwift-Table-Collection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/iOS_Tian/Desktop/Xcode8/RxSwift-Table-Collection/RxSwift-Table-Collection1/RxSwift-Table-Collection/RxSwift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -574,13 +580,15 @@
 			baseConfigurationReference = A8B08835F7CBFF3EF178F7BC /* Pods-RxSwift-Table-Collection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3HG8J7L5X5;
+				DEVELOPMENT_TEAM = 39D8T9VWXG;
 				INFOPLIST_FILE = "RxSwift-Table-Collection/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.quanjun.www.RxSwift-Table-Collection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/iOS_Tian/Desktop/Xcode8/RxSwift-Table-Collection/RxSwift-Table-Collection1/RxSwift-Table-Collection/RxSwift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

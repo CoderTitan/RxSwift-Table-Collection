@@ -24,8 +24,13 @@ class RxCollectionViewController: UIViewController {
         super.viewDidLoad()
         title = "CollectionViewController"
         
-        //1.加载collectionViewCell
+        //0.加载collectionViewCell
         collectionVIew.register(UINib(nibName: "RxCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: kCollecCellID)
+        
+        //1.添加刷新
+        collectionVIew.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(collectionHeaderRefresh))
+        collectionVIew.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(collectionFooterRefresh))
+        collectionVIew.mj_header.beginRefreshing()
         
         //2.给collectionView绑定数据
         anchorVM.heroVariable.asDriver().drive(collectionVIew.rx.items(cellIdentifier: kCollecCellID, cellType: RxCollectionViewCell.self)) { (_, anchor, cell) in
@@ -36,6 +41,17 @@ class RxCollectionViewController: UIViewController {
         collectionVIew.rx.modelSelected(AnchorModel.self).subscribe(onNext: { (model) in
             print(model.name)
         }).addDisposableTo(bag)
+    }
+    
+    
+    //下拉刷新
+    @objc fileprivate func collectionHeaderRefresh(){
+        
+    }
+    
+    //上拉加载
+    @objc fileprivate func collectionFooterRefresh(){
+        
     }
 
 }

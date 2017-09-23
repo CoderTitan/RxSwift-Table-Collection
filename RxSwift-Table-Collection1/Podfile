@@ -5,10 +5,24 @@ target 'RxSwift-Table-Collection' do
 
   use_frameworks!
 
-pod 'RxSwift'
-pod 'RxCocoa'
-pod 'RxDataSources'
-pod 'Alamofire'
-pod 'Kingfisher'
+    # Swift三方库
+    # Rx
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxDataSources'
+
+    # 网络请求
+    pod 'Alamofire'
+
+    # 图片处理
+    pod 'Kingfisher'
+    
+    
+    
+    # OC库
+    # MJRefresh
+    pod 'MJRefresh'
+
+
 
 end

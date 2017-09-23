@@ -22,7 +22,6 @@ class AnchorViewModel {
         return variable
     }()
 
-
 }
 
 
