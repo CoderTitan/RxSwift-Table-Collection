@@ -12,17 +12,20 @@ target 'RxSwift-Table-Collection' do
     pod 'RxDataSources'
 
     # 网络请求
-    pod 'Alamofire'
+    pod 'Moya/RxSwift'
 
     # 图片处理
     pod 'Kingfisher'
-    
-    
+
+    # 数据解析
+    pod 'ObjectMapper'
+
+
     
     # OC库
     # MJRefresh
     pod 'MJRefresh'
-
+    pod 'SVProgressHUD'
 
 
 end
