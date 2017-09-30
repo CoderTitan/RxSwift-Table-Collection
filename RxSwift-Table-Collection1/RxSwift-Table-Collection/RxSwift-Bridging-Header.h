@@ -11,6 +11,6 @@
 
 //Libs使用cocoaPods集成
 #import "MJRefresh.h"
-#import "SVProgressHUD"
+#import "SVProgressHUD.h"
 
 #endif /* RxSwift_Bridging_Header_h */

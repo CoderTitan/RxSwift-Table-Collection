@@ -10,40 +10,47 @@ import UIKit
 import RxSwift
 import Alamofire
 
-class AnchorViewModel {
+
+
+class AnchorViewModel : BaseViewModel{
     
-    fileprivate lazy var anchorArr = [AnchorModel]()
-    
-    lazy var heroVariable: Variable<[AnchorModel]> = {
-        var variable: Variable<[AnchorModel]> = Variable(self.anchorArr)
-        self.getAnchorData {
-            variable.value = self.anchorArr
-        }
-        return variable
-    }()
+    // 存放着解析完成的模型数组
+    let anchorArr = Variable<[AnchorModel]>([])
 
 }
 
 
-extension AnchorViewModel {
-    fileprivate func getAnchorData(_ finished: @escaping() -> ()){
-        // 1.发送网络请求
-        Alamofire.request("http://qf.56.com/home/v4/moreAnchor.ios", method: .get, parameters: ["index": 0]).responseJSON { (response) in
-            // 2.获取结果
-            guard let result = response.result.value else {
-                print(response.result.error!)
-                return
-            }
-            
-            //3. 解析数据
-            guard let jsonData = result as? [String: Any] else { return }
-            guard let message = jsonData["message"] as? [String: Any] else { return }
-            guard let anchors = message["anchors"] as? [[String: Any]] else { return }
-            
-            
-            // 4.遍历所有的字典并且转成模型对象
-            self.anchorArr += anchors.map({ AnchorModel(dic: $0) })
-            finished()
-        }
+extension AnchorViewModel: JunViewModelType {
+    typealias Input = JunInput
+    typealias Output = JunOutput
+
+    func transform(input: AnchorViewModel.JunInput) -> AnchorViewModel.JunOutput {
+        let sectionArr = anchorArr.asDriver().map { (models) -> [AnchorSection] in
+            // 当models的值被改变时会调用
+            return [AnchorSection(items: models)]
+        }.asDriver(onErrorJustReturn: [])
+        
+        let output = JunOutput(sections: sectionArr)
+        
+        output.requestCommond.subscribe(onNext: { (isReloadData) in
+            self.index = isReloadData ? 1 : self.index + 1
+            //开始请求数据
+            netTool.request(JunNetworkTool.getHomeList(page: self.index))
+                .mapObjectArray(AnchorModel.self)
+                .subscribe({ (event) in
+                    switch event {
+                    case let .next(modelArr):
+                        self.anchorArr.value = isReloadData ? modelArr : (self.anchorArr.value) + modelArr
+                        SVProgressHUD.showSuccess(withStatus: "加载成功")
+                    case let .error(error):
+                        SVProgressHUD.showError(withStatus: error.localizedDescription)
+                    case .completed:
+                        output.refreshStatus.value = isReloadData ? .endHeaderRefresh : .endFooterRefresh
+                    }
+            }).addDisposableTo(bag)
+        }).addDisposableTo(bag)
+        
+        return output
     }
 }
+

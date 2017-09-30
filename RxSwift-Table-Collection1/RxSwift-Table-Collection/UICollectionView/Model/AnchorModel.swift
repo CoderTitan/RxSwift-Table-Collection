@@ -7,27 +7,43 @@
 //
 
 import UIKit
+import ObjectMapper
+import RxDataSources
 
-class AnchorModel: NSObject {
+class AnchorModel: Mappable {
 
-    var roomid : Int = 0
-    var name : String = ""
-    var pic51 : String = ""
-    var pic74 : String = ""
-    var live : Int = 0 
-    var push : Int = 0 
-    var focus : Int = 0 
+    var name = ""
+    var pic51 = ""
+    var pic74 = ""
+    var live = 0
+    var push = 0
+    var focus = 0
     
-    var isEvenIndex : Bool = false
-
-    
-    init(dic : [String : Any]) {
-        super.init()
+    required init?(map: Map) {
         
-        name = dic["name"] as? String ?? ""
-        pic51 = dic["pic51"] as? String ?? ""
-        pic74 = dic["pic74"] as? String ?? ""
-        focus = dic["focus"] as? Int ?? 0
+    }
+    
+    func mapping(map: Map) {
+        name  <- map["name"]
+        pic51 <- map["pic51"]
+        pic74 <- map["pic74"]
+        live  <- map["live"]
+        push  <- map["push"]
+        focus <- map["focus"]
+    }
+}
 
+
+//MARK: SectionModel
+struct AnchorSection {
+    var items: [Item]
+    
+}
+
+extension AnchorSection: SectionModelType {
+    typealias Item = AnchorModel
+    init(original: AnchorSection, items: [AnchorSection.Item]) {
+        self = original
+        self.items = items
     }
 }
