@@ -31,7 +31,7 @@ class RxCollectionViewController: UIViewController {
         //1.设置代理
         //1-1. 绑定cell
         let dataSource = RxCollectionViewSectionedReloadDataSource<AnchorSection>()
-        dataSource.configureCell = { ds, collectionView, indexPath, item in
+        dataSource.configureCell = { dataSource, collectionView, indexPath, item in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCollecCellID, for: indexPath) as! RxCollectionViewCell
             cell.anchorModel = item
             return cell
@@ -52,7 +52,16 @@ class RxCollectionViewController: UIViewController {
         })
         
         //4. 给collectionView绑定数据
-        vmOutput.sections.asDriver().drive(collectionVIew.rx.items(dataSource: dataSource)).addDisposableTo(bag)
+        //4-1. 通过dataSource和section的model数组绑定数据(demo的用法, 推荐)
+        vmOutput.sections.asDriver()
+            .drive(collectionVIew.rx.items(dataSource: dataSource))
+            .addDisposableTo(bag)
+        
+        /*4-2. 通过所有的数据源数组直接绑定cell,无需考虑section和row
+        anchorVM.anchorArr.asDriver().drive(collectionVIew.rx.items(cellIdentifier: kCollecCellID, cellType: RxCollectionViewCell.self)) { (item, anchor, cell) in
+            cell.anchorModel = anchor
+        }.addDisposableTo(bag)
+         */
         
         //5. 设置刷新状态
         vmOutput.refreshStatus.asObservable().subscribe(onNext: { (status) in

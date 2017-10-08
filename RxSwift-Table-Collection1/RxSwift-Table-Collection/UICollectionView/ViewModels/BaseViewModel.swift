@@ -53,6 +53,7 @@ class BaseViewModel: NSObject {
         // 告诉外界的tableView当前的刷新状态
         let refreshStatus = Variable<JunRefreshStatus>(.none)
         
+        //初始化时,section的数据
         init(sections: Driver<[AnchorSection]>) {
             self.sections = sections
         }

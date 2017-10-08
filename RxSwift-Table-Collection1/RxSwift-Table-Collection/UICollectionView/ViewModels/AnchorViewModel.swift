@@ -11,9 +11,7 @@ import RxSwift
 import Alamofire
 
 
-
 class AnchorViewModel : BaseViewModel{
-    
     // 存放着解析完成的模型数组
     let anchorArr = Variable<[AnchorModel]>([])
 
@@ -35,7 +33,7 @@ extension AnchorViewModel: JunViewModelType {
         output.requestCommond.subscribe(onNext: { (isReloadData) in
             self.index = isReloadData ? 1 : self.index + 1
             //开始请求数据
-            netTool.request(JunNetworkTool.getHomeList(page: self.index))
+            junNetworkTool.request(JunNetworkTool.getHomeList(page: self.index))
                 .mapObjectArray(AnchorModel.self)
                 .subscribe({ (event) in
                     switch event {

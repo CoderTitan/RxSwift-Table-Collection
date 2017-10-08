@@ -12,7 +12,7 @@ import RxSwift
 
 
 //网络请求
-let netTool = RxMoyaProvider<JunNetworkTool>()
+let junNetworkTool = RxMoyaProvider<JunNetworkTool>()
 let bag = DisposeBag()
 
 

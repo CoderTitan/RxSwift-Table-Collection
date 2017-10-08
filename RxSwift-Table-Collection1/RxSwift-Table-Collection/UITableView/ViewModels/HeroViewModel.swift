@@ -28,6 +28,7 @@ class HeroViewModel {
                 //model是否包含搜索字符串
                 return hero.name.contains(str)
             })
+            //修改value值,重新发出事件
             self.heroVariable.value = heros
         }).addDisposableTo(bag)
     }
@@ -47,7 +48,6 @@ extension HeroViewModel {
         let dictArray = NSArray(contentsOfFile: path) as! [[String : Any]]
         
         // 3.遍历所有的字典并且转成模型对象
-        
         return dictArray.map({ HeroModel(dict: $0) }).reversed()
     }
 }
