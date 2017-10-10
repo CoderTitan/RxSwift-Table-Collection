@@ -64,7 +64,8 @@ class RxCollectionViewController: UIViewController {
          */
         
         //5. 设置刷新状态
-        vmOutput.refreshStatus.asObservable().subscribe(onNext: { (status) in
+        vmOutput.refreshStatus.asObservable()
+            .subscribe(onNext: { (status) in
             switch status {
             case .beingHeaderRefresh:
                 self.collectionVIew.mj_header.beginRefreshing()
@@ -84,7 +85,8 @@ class RxCollectionViewController: UIViewController {
         
         
         // 6.监听collectionView的点击
-        collectionVIew.rx.modelSelected(AnchorModel.self).subscribe(onNext: { (model) in
+        collectionVIew.rx.modelSelected(AnchorModel.self)
+            .subscribe(onNext: { (model) in
             print(model.name)
         }).addDisposableTo(bag)
     }
